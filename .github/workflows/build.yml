@@ -19,8 +19,8 @@ jobs:
     - name: Build templates
       run: |
         sh build.sh
-    - name: Upload math result for job 2
+    - name: Upload Vannila-Purpur-latest.tar.zst
       uses: actions/upload-artifact@v3
       with:
-        name: Vannila-Purpur-latest
+        name: Vannila-Purpur-latest.tar.zst
         path: Vannila-Purpur-latest.tar.zst

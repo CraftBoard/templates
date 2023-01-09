@@ -1,7 +1,7 @@
 version: "3"
 services:
   minecraft-server:
-    image: craftboard/runner-alpine-corretto-17
+    image: craftboard/runner-alpaquita-liberica-17
     container_name: 
     ports: 
      - 25565:25565

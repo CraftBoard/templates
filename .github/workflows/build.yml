@@ -1,4 +1,5 @@
 name: Build templates
+
 on:
   push:
     branches: [ "main" ]
@@ -8,15 +9,13 @@ on:
     - cron: '0 0 * * 0'
 
 jobs:
-  job_1:
-    name: build Vannila-Purpur-latest
+
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - shell: bash
-        run: |
-            sh build.sh
-      - name: Upload result
-        uses: actions/checkout@v3
-        with:
-          name: Vannila-Purpur-latest
-          path: Vannila-Purpur-latest.tar.zst
+    - uses: actions/checkout@v3
+    - name: Build templates
+      run: |
+        sh build.sh

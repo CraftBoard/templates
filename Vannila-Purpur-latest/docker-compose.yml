@@ -1,0 +1,13 @@
+version: "3"
+services:
+  minecraft-server:
+    image: craftboard/runner-alpine-corretto-17
+    container_name: 
+    ports: 
+     - 25565:25565
+    volumes:
+      - ./server:/opt/server
+    environment:
+    - RAM_ALLOCATED=2G
+    restart: on-failure
+    stdin_open: true

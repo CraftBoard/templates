@@ -1,0 +1,15 @@
+name: Build templates
+on: [push]
+
+jobs:
+  job_1:
+    name: build Vannila-Purpur-latest
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: ./build.sh
+      - name: Upload result
+        uses: actions/upload-artifact@v3
+        with:
+          name: Vannila-Purpur-latest
+          path: Vannila-Purpur-latest.tar.zst
